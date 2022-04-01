@@ -1,0 +1,47 @@
+@import "../abstracts/variables";
+
+.card {
+    min-width: 35rem;
+    min-height: 40rem;
+    background-color: lighten($color: $color_primary, $amount: 33%);
+    border-radius: 1.6rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 0;
+    @media screen and (max-width: 700px) {
+        width: 35rem;
+    }
+}
+
+.card_name {
+    color: darken($color: $color_primary, $amount: 20%);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.card_price {
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.card_price span {
+    font-size: 2rem;
+}
+.card_list {
+    margin-top: 2rem;
+    list-style: none;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.card_list_item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
