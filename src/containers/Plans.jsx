@@ -2,6 +2,9 @@ import Card from "../components/card";
 
 import { subscriptions } from "../config/constants.js";
 const Plans = () => {
+    const subscribeHandler = (name) => {
+        console.log(name);
+    };
     return (
         <div className='plans'>
             <Card
@@ -10,6 +13,7 @@ const Plans = () => {
                 prons={subscriptions.pro.prons}
                 cons={subscriptions.pro.cons}
                 buttonName={"Subscribe"}
+                subscriptionClickHandler={() => subscribeHandler("pro")}
             />
             <Card
                 name={subscriptions.basic.name}
@@ -17,6 +21,7 @@ const Plans = () => {
                 prons={subscriptions.basic.prons}
                 cons={subscriptions.basic.cons}
                 buttonName={"Subscribe"}
+                subscriptionClickHandler={() => subscribeHandler("basic")}
             />
         </div>
     );

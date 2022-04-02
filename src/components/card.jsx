@@ -1,7 +1,14 @@
 import { AiOutlineCheck, AiOutlineClose } from "react-icons/ai";
 import Button from "./button";
 
-const Card = ({ name, price, prons = [], cons = [], buttonName }) => {
+const Card = ({
+    name,
+    price,
+    prons = [],
+    cons = [],
+    buttonName,
+    subscriptionClickHandler,
+}) => {
     return (
         <div className='card'>
             <p className='card_name'>{name}</p>
@@ -13,7 +20,7 @@ const Card = ({ name, price, prons = [], cons = [], buttonName }) => {
                 {prons.length > 0 && (
                     <ul className='card_list'>
                         {prons.map((item) => (
-                            <li className='card_list_item'>
+                            <li className='card_list_item' key={item}>
                                 {" "}
                                 <AiOutlineCheck
                                     color='#7ed56f'
@@ -27,7 +34,7 @@ const Card = ({ name, price, prons = [], cons = [], buttonName }) => {
                 {cons.length > 0 && (
                     <ul className='card_list'>
                         {cons.map((item) => (
-                            <li className='card_list_item'>
+                            <li className='card_list_item' key={item}>
                                 {" "}
                                 <AiOutlineClose
                                     color='#7ed56f'
@@ -40,7 +47,11 @@ const Card = ({ name, price, prons = [], cons = [], buttonName }) => {
                 )}
             </div>
 
-            <Button label={buttonName} className={"btn-primary"} />
+            <Button
+                label={buttonName}
+                className={"btn-primary"}
+                onClick={subscriptionClickHandler}
+            />
         </div>
     );
 };
