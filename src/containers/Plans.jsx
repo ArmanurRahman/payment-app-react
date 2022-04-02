@@ -1,9 +1,12 @@
-import Card from "../components/card";
+import { useNavigate } from "react-router-dom";
 
+import Card from "../components/card";
 import { subscriptions } from "../config/constants.js";
+
 const Plans = () => {
+    const navigate = useNavigate();
     const subscribeHandler = (name) => {
-        console.log(name);
+        navigate(`/payment/${name}`);
     };
     return (
         <div className='plans'>
