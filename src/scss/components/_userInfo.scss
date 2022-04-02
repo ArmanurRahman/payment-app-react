@@ -1,0 +1,15 @@
+.userInfo_container{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1.6rem;    
+}
+
+.userInfo_name{
+    display: flex;
+    gap: 1.6rem;
+}
+
+.userInfo_btn{
+    align-self: flex-end;
+}

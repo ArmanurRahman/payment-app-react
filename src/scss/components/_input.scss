@@ -1,0 +1,26 @@
+@import "../abstracts/variables";
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: 100%;
+}
+
+.input_container input{
+    
+    outline: none;
+    padding: .8rem 1rem;
+    border: 1px gray solid;
+    border-radius: 3px;
+
+    &:focus{
+        border: none;
+        outline: 3px $color_primary solid;
+    }
+}
+
+.input_container label {
+    font-size: 1.6rem;
+}
