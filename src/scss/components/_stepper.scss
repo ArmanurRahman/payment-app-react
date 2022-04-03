@@ -1,0 +1,54 @@
+@import "../abstracts/variables";
+
+.stepper_container {
+ display: flex;
+ margin-bottom: 3rem;
+ width: 100%;
+ justify-content: center;
+}
+
+.step{
+    width: 4rem;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.stepper_edge{
+    display: flex;
+}
+
+.step-number{
+ width: 3rem;
+ height: 3rem;
+ background-color: #c5c5c5;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 100%;
+ overflow: hidden;
+ 
+}
+
+.icon{
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+}
+
+.active{
+    background-color: $color_primary;
+}
+.success{
+    background-color: $color_primary;
+}
+.edge{
+    flex: 1;
+    height: 1rem;
+    background-color: #c5c5c5;
+    margin-top: 1rem;
+    
+}

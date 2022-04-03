@@ -1,13 +1,18 @@
 import { useParams } from "react-router-dom";
 
 import UserInfo from "./UserInfo";
+import Stepper from "../components/Stepper";
 
 const Payment = () => {
-    const param = useParams();
+    // const param = useParams();
     return (
         <div className='payment_container'>
-            {param.planId}
-            <UserInfo />
+            <div>
+                <Stepper />
+            </div>
+            <div className='payment_user_info'>
+                <UserInfo />
+            </div>
         </div>
     );
 };
