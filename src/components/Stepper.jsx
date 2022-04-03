@@ -13,7 +13,7 @@ const Stepper = () => {
         },
     ];
 
-    const activeStep = useState(2)[0];
+    const activeStep = useState(1)[0];
     return (
         <div className='stepper_container'>
             {steps.map((item, index) => (
@@ -41,7 +41,13 @@ const Stepper = () => {
                         </div>
                         <div className='step-label'>{item.label}</div>
                     </div>
-                    {index < steps.length - 1 && <div className='edge'></div>}
+                    {index < steps.length - 1 && (
+                        <div
+                            className={`edge ${
+                                item.number < activeStep ? "success" : ""
+                            }`}
+                        ></div>
+                    )}
                 </div>
             ))}
         </div>
