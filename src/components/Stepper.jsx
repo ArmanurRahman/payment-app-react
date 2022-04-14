@@ -1,7 +1,7 @@
 import { AiOutlineCheck } from "react-icons/ai";
 import React, { useState } from "react";
 
-const Stepper = () => {
+const Stepper = ({ activeStep }) => {
     const steps = [
         {
             number: 1,
@@ -13,7 +13,6 @@ const Stepper = () => {
         },
     ];
 
-    const activeStep = useState(1)[0];
     return (
         <div className='stepper_container'>
             {steps.map((item, index) => (
